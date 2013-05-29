@@ -3,7 +3,7 @@
 //  HFSUtilsGUI
 //
 //  Created by Giancarlo Mariot on 26/05/2013.
-//  Copyright (c) 2013 Zerogrey. All rights reserved.
+//  Copyright (c) 2013 Giancarlo Mariot. All rights reserved.
 //
 //------------------------------------------------------------------------------
 //

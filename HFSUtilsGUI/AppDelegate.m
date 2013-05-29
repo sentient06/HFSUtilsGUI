@@ -3,7 +3,7 @@
 //  HFSUtilsGUI
 //
 //  Created by Giancarlo Mariot on 17/05/2013.
-//  Copyright (c) 2013 Zerogrey. All rights reserved.
+//  Copyright (c) 2013 Giancarlo Mariot. All rights reserved.
 //
 //------------------------------------------------------------------------------
 //
@@ -118,7 +118,7 @@
             
             NSRange customPosition                  = [valueOfSizePopUp rangeOfString:@"Custom"];
             NSRange customLeftRoundBracketPosition  = [valueOfSizePopUp rangeOfString:@"("];
-            NSRange customLightRoundBracketPosition = [valueOfSizePopUp rangeOfString:@")"];
+            NSRange customRightRoundBracketPosition = [valueOfSizePopUp rangeOfString:@")"];
             
             BOOL usesCustomSize = !(customPosition.location == NSNotFound);
             BOOL hasBrackets    = !(customLeftRoundBracketPosition.location == NSNotFound);
@@ -129,7 +129,7 @@
 
                 sizeRange = NSMakeRange(
                     customLeftRoundBracketPosition.location + 1,
-                    customLightRoundBracketPosition.location - customLeftRoundBracketPosition.location-1
+                    customRightRoundBracketPosition.location - customLeftRoundBracketPosition.location-1
                 );
                 valueOfSizePopUpToParse = [valueOfSizePopUp substringWithRange:sizeRange];
                 
