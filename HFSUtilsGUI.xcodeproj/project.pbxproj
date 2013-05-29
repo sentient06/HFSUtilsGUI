@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		811170DB17532F740073792B /* NumberFieldFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 811170DA17532F740073792B /* NumberFieldFormatter.m */; };
+		8121CBCE1746576900D5B436 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8121CBCD1746576900D5B436 /* Cocoa.framework */; };
+		8121CBD81746576900D5B436 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8121CBD61746576900D5B436 /* InfoPlist.strings */; };
+		8121CBDA1746576900D5B436 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8121CBD91746576900D5B436 /* main.m */; };
+		8121CBDE1746576900D5B436 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8121CBDC1746576900D5B436 /* Credits.rtf */; };
+		8121CBE11746576900D5B436 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8121CBE01746576900D5B436 /* AppDelegate.m */; };
+		8121CBE41746576900D5B436 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8121CBE21746576900D5B436 /* MainMenu.xib */; };
+		8121CC1A17465AB500D5B436 /* hattrib in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC0B17465AB500D5B436 /* hattrib */; };
+		8121CC1B17465AB500D5B436 /* hcd in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC0C17465AB500D5B436 /* hcd */; };
+		8121CC1C17465AB500D5B436 /* hcopy in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC0D17465AB500D5B436 /* hcopy */; };
+		8121CC1D17465AB500D5B436 /* hdel in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC0E17465AB500D5B436 /* hdel */; };
+		8121CC1E17465AB500D5B436 /* hdir in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC0F17465AB500D5B436 /* hdir */; };
+		8121CC1F17465AB500D5B436 /* hformat in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1017465AB500D5B436 /* hformat */; };
+		8121CC2017465AB500D5B436 /* hfsutil in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1117465AB500D5B436 /* hfsutil */; };
+		8121CC2117465AB500D5B436 /* hls in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1217465AB500D5B436 /* hls */; };
+		8121CC2217465AB500D5B436 /* hmkdir in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1317465AB500D5B436 /* hmkdir */; };
+		8121CC2317465AB500D5B436 /* hmount in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1417465AB500D5B436 /* hmount */; };
+		8121CC2417465AB500D5B436 /* hpwd in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1517465AB500D5B436 /* hpwd */; };
+		8121CC2517465AB500D5B436 /* hrename in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1617465AB500D5B436 /* hrename */; };
+		8121CC2617465AB500D5B436 /* hrmdir in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1717465AB500D5B436 /* hrmdir */; };
+		8121CC2717465AB500D5B436 /* humount in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1817465AB500D5B436 /* humount */; };
+		8121CC2817465AB500D5B436 /* hvol in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1917465AB500D5B436 /* hvol */; };
+		8121CC2917465AF300D5B436 /* hattrib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC0B17465AB500D5B436 /* hattrib */; };
+		8121CC2A17465AF300D5B436 /* hcd in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC0C17465AB500D5B436 /* hcd */; };
+		8121CC2B17465AF300D5B436 /* hcopy in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC0D17465AB500D5B436 /* hcopy */; };
+		8121CC2C17465AF300D5B436 /* hdel in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC0E17465AB500D5B436 /* hdel */; };
+		8121CC2D17465AF300D5B436 /* hdir in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC0F17465AB500D5B436 /* hdir */; };
+		8121CC2E17465AF300D5B436 /* hformat in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1017465AB500D5B436 /* hformat */; };
+		8121CC2F17465AF300D5B436 /* hfsutil in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1117465AB500D5B436 /* hfsutil */; };
+		8121CC3017465AF300D5B436 /* hls in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1217465AB500D5B436 /* hls */; };
+		8121CC3117465AF300D5B436 /* hmkdir in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1317465AB500D5B436 /* hmkdir */; };
+		8121CC3217465AF300D5B436 /* hmount in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1417465AB500D5B436 /* hmount */; };
+		8121CC3317465AF300D5B436 /* hpwd in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1517465AB500D5B436 /* hpwd */; };
+		8121CC3417465AF300D5B436 /* hrename in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1617465AB500D5B436 /* hrename */; };
+		8121CC3517465AF300D5B436 /* hrmdir in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1717465AB500D5B436 /* hrmdir */; };
+		8121CC3617465AF300D5B436 /* humount in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1817465AB500D5B436 /* humount */; };
+		8121CC3717465AF300D5B436 /* hvol in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1917465AB500D5B436 /* hvol */; };
+		8149BB7E1754D06E005AB3C7 /* CreateImageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8149BB7D1754D06E005AB3C7 /* CreateImageWindowController.m */; };
+		8149BB801754D088005AB3C7 /* CreateImageWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8149BB7F1754D088005AB3C7 /* CreateImageWindow.xib */; };
+		8183CDE9174FA94C001A4BA5 /* Icon01.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8183CDE8174FA94C001A4BA5 /* Icon01.icns */; };
+		8183CDF1174FCC21001A4BA5 /* ImageUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8183CDF0174FCC21001A4BA5 /* ImageUtility.m */; };
+		819A1CFF17522E5400AF93C0 /* CustomDiskSizeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A1CFE17522E5400AF93C0 /* CustomDiskSizeWindowController.m */; };
+		81B475C61753B60D00F69FF8 /* CustomDiskSizeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B475C51753B60D00F69FF8 /* CustomDiskSizeWindow.xib */; };
+		81B475C81753B83500F69FF8 /* HFSUtilsIcon2.icns in Resources */ = {isa = PBXBuildFile; fileRef = 81B475C71753B83500F69FF8 /* HFSUtilsIcon2.icns */; };
+		81CA8BA41756665500565AB4 /* HFSProject.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CA8BA31756665500565AB4 /* HFSProject.png */; };
+		81E6840E175616C100E98E2F /* HFSUtilsIcon3.icns in Resources */ = {isa = PBXBuildFile; fileRef = 81E6840D175616C100E98E2F /* HFSUtilsIcon3.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8121CBEA17465A4100D5B436 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = HFSTools;
+			dstSubfolderSpec = 6;
+			files = (
+				8121CC2917465AF300D5B436 /* hattrib in CopyFiles */,
+				8121CC2A17465AF300D5B436 /* hcd in CopyFiles */,
+				8121CC2B17465AF300D5B436 /* hcopy in CopyFiles */,
+				8121CC2C17465AF300D5B436 /* hdel in CopyFiles */,
+				8121CC2D17465AF300D5B436 /* hdir in CopyFiles */,
+				8121CC2E17465AF300D5B436 /* hformat in CopyFiles */,
+				8121CC2F17465AF300D5B436 /* hfsutil in CopyFiles */,
+				8121CC3017465AF300D5B436 /* hls in CopyFiles */,
+				8121CC3117465AF300D5B436 /* hmkdir in CopyFiles */,
+				8121CC3217465AF300D5B436 /* hmount in CopyFiles */,
+				8121CC3317465AF300D5B436 /* hpwd in CopyFiles */,
+				8121CC3417465AF300D5B436 /* hrename in CopyFiles */,
+				8121CC3517465AF300D5B436 /* hrmdir in CopyFiles */,
+				8121CC3617465AF300D5B436 /* humount in CopyFiles */,
+				8121CC3717465AF300D5B436 /* hvol in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		811170D917532F740073792B /* NumberFieldFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberFieldFormatter.h; path = Controllers/HelperControllers/NumberFieldFormatter.h; sourceTree = "<group>"; };
+		811170DA17532F740073792B /* NumberFieldFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberFieldFormatter.m; path = Controllers/HelperControllers/NumberFieldFormatter.m; sourceTree = "<group>"; };
+		8121CBC91746576900D5B436 /* HFSUtilsGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFSUtilsGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8121CBCD1746576900D5B436 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8121CBD01746576900D5B436 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8121CBD11746576900D5B436 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8121CBD21746576900D5B436 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8121CBD51746576900D5B436 /* HFSUtilsGUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HFSUtilsGUI-Info.plist"; sourceTree = "<group>"; };
+		8121CBD71746576900D5B436 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8121CBD91746576900D5B436 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8121CBDB1746576900D5B436 /* HFSUtilsGUI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFSUtilsGUI-Prefix.pch"; sourceTree = "<group>"; };
+		8121CBDD1746576900D5B436 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8121CBDF1746576900D5B436 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = HFSUtilsGUI/AppDelegate.h; sourceTree = "<group>"; };
+		8121CBE01746576900D5B436 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = HFSUtilsGUI/AppDelegate.m; sourceTree = "<group>"; };
+		8121CBE31746576900D5B436 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8121CC0B17465AB500D5B436 /* hattrib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hattrib; sourceTree = "<group>"; };
+		8121CC0C17465AB500D5B436 /* hcd */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hcd; sourceTree = "<group>"; };
+		8121CC0D17465AB500D5B436 /* hcopy */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hcopy; sourceTree = "<group>"; };
+		8121CC0E17465AB500D5B436 /* hdel */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hdel; sourceTree = "<group>"; };
+		8121CC0F17465AB500D5B436 /* hdir */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hdir; sourceTree = "<group>"; };
+		8121CC1017465AB500D5B436 /* hformat */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hformat; sourceTree = "<group>"; };
+		8121CC1117465AB500D5B436 /* hfsutil */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hfsutil; sourceTree = "<group>"; };
+		8121CC1217465AB500D5B436 /* hls */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hls; sourceTree = "<group>"; };
+		8121CC1317465AB500D5B436 /* hmkdir */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hmkdir; sourceTree = "<group>"; };
+		8121CC1417465AB500D5B436 /* hmount */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hmount; sourceTree = "<group>"; };
+		8121CC1517465AB500D5B436 /* hpwd */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hpwd; sourceTree = "<group>"; };
+		8121CC1617465AB500D5B436 /* hrename */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hrename; sourceTree = "<group>"; };
+		8121CC1717465AB500D5B436 /* hrmdir */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hrmdir; sourceTree = "<group>"; };
+		8121CC1817465AB500D5B436 /* humount */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = humount; sourceTree = "<group>"; };
+		8121CC1917465AB500D5B436 /* hvol */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hvol; sourceTree = "<group>"; };
+		8149BB7C1754D06E005AB3C7 /* CreateImageWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateImageWindowController.h; path = Controllers/WindowControllers/CreateImageWindowController.h; sourceTree = "<group>"; };
+		8149BB7D1754D06E005AB3C7 /* CreateImageWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateImageWindowController.m; path = Controllers/WindowControllers/CreateImageWindowController.m; sourceTree = "<group>"; };
+		8149BB7F1754D088005AB3C7 /* CreateImageWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CreateImageWindow.xib; path = Views/CreateImageWindow.xib; sourceTree = "<group>"; };
+		8183CDE8174FA94C001A4BA5 /* Icon01.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Icon01.icns; path = HFSUtilsGUI/Images/Icons/Icon01.icns; sourceTree = "<group>"; };
+		8183CDEF174FCC21001A4BA5 /* ImageUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageUtility.h; path = Controllers/UtilityControllers/ImageUtility.h; sourceTree = "<group>"; };
+		8183CDF0174FCC21001A4BA5 /* ImageUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageUtility.m; path = Controllers/UtilityControllers/ImageUtility.m; sourceTree = "<group>"; };
+		819A1CFD17522E5400AF93C0 /* CustomDiskSizeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomDiskSizeWindowController.h; path = Controllers/WindowControllers/CustomDiskSizeWindowController.h; sourceTree = "<group>"; };
+		819A1CFE17522E5400AF93C0 /* CustomDiskSizeWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomDiskSizeWindowController.m; path = Controllers/WindowControllers/CustomDiskSizeWindowController.m; sourceTree = "<group>"; };
+		81B475C51753B60D00F69FF8 /* CustomDiskSizeWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomDiskSizeWindow.xib; path = Views/CustomDiskSizeWindow.xib; sourceTree = "<group>"; };
+		81B475C71753B83500F69FF8 /* HFSUtilsIcon2.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = HFSUtilsIcon2.icns; path = HFSUtilsGUI/Images/Icons/HFSUtilsIcon2.icns; sourceTree = "<group>"; };
+		81CA8BA31756665500565AB4 /* HFSProject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HFSProject.png; path = HFSUtilsGUI/Images/HFSProject.png; sourceTree = "<group>"; };
+		81E6840D175616C100E98E2F /* HFSUtilsIcon3.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = HFSUtilsIcon3.icns; path = HFSUtilsGUI/Images/Icons/HFSUtilsIcon3.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8121CBC61746576900D5B436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8121CBCE1746576900D5B436 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		811170D817532EFA0073792B /* HelperControllers */ = {
+			isa = PBXGroup;
+			children = (
+				811170D917532F740073792B /* NumberFieldFormatter.h */,
+				811170DA17532F740073792B /* NumberFieldFormatter.m */,
+			);
+			name = HelperControllers;
+			path = HFSUtilsGUI;
+			sourceTree = "<group>";
+		};
+		8121CBBE1746576800D5B436 = {
+			isa = PBXGroup;
+			children = (
+				8121CC0A17465AB500D5B436 /* HFSTools */,
+				81E684191756515F00E98E2F /* Controllers */,
+				8141B387174E1C8800D89992 /* Views */,
+				8121CBD41746576900D5B436 /* Supporting Files */,
+				8121CBCC1746576900D5B436 /* Frameworks */,
+				8121CBCA1746576900D5B436 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8121CBCA1746576900D5B436 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8121CBC91746576900D5B436 /* HFSUtilsGUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8121CBCC1746576900D5B436 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8121CBCD1746576900D5B436 /* Cocoa.framework */,
+				8121CBCF1746576900D5B436 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8121CBCF1746576900D5B436 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8121CBD01746576900D5B436 /* AppKit.framework */,
+				8121CBD11746576900D5B436 /* CoreData.framework */,
+				8121CBD21746576900D5B436 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8121CBD41746576900D5B436 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8183CDEA174FA952001A4BA5 /* Images */,
+				8121CBD51746576900D5B436 /* HFSUtilsGUI-Info.plist */,
+				8121CBD61746576900D5B436 /* InfoPlist.strings */,
+				8121CBD91746576900D5B436 /* main.m */,
+				8121CBDB1746576900D5B436 /* HFSUtilsGUI-Prefix.pch */,
+				8121CBDC1746576900D5B436 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			path = HFSUtilsGUI;
+			sourceTree = "<group>";
+		};
+		8121CC0A17465AB500D5B436 /* HFSTools */ = {
+			isa = PBXGroup;
+			children = (
+				8121CC0B17465AB500D5B436 /* hattrib */,
+				8121CC0C17465AB500D5B436 /* hcd */,
+				8121CC0D17465AB500D5B436 /* hcopy */,
+				8121CC0E17465AB500D5B436 /* hdel */,
+				8121CC0F17465AB500D5B436 /* hdir */,
+				8121CC1017465AB500D5B436 /* hformat */,
+				8121CC1117465AB500D5B436 /* hfsutil */,
+				8121CC1217465AB500D5B436 /* hls */,
+				8121CC1317465AB500D5B436 /* hmkdir */,
+				8121CC1417465AB500D5B436 /* hmount */,
+				8121CC1517465AB500D5B436 /* hpwd */,
+				8121CC1617465AB500D5B436 /* hrename */,
+				8121CC1717465AB500D5B436 /* hrmdir */,
+				8121CC1817465AB500D5B436 /* humount */,
+				8121CC1917465AB500D5B436 /* hvol */,
+			);
+			path = HFSTools;
+			sourceTree = "<group>";
+		};
+		8141B387174E1C8800D89992 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8121CBE21746576900D5B436 /* MainMenu.xib */,
+				81B475C51753B60D00F69FF8 /* CustomDiskSizeWindow.xib */,
+				8149BB7F1754D088005AB3C7 /* CreateImageWindow.xib */,
+			);
+			name = Views;
+			path = HFSUtilsGUI;
+			sourceTree = "<group>";
+		};
+		8149BB7B1754CFE1005AB3C7 /* WindowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8149BB7C1754D06E005AB3C7 /* CreateImageWindowController.h */,
+				8149BB7D1754D06E005AB3C7 /* CreateImageWindowController.m */,
+				819A1CFD17522E5400AF93C0 /* CustomDiskSizeWindowController.h */,
+				819A1CFE17522E5400AF93C0 /* CustomDiskSizeWindowController.m */,
+			);
+			name = WindowControllers;
+			path = HFSUtilsGUI;
+			sourceTree = "<group>";
+		};
+		8183CDEA174FA952001A4BA5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				81CA8BA31756665500565AB4 /* HFSProject.png */,
+				81E6841A175651C700E98E2F /* Icons */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		819A1D0017522E9B00AF93C0 /* UtilityControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8183CDEF174FCC21001A4BA5 /* ImageUtility.h */,
+				8183CDF0174FCC21001A4BA5 /* ImageUtility.m */,
+			);
+			name = UtilityControllers;
+			path = HFSUtilsGUI;
+			sourceTree = "<group>";
+		};
+		81E684191756515F00E98E2F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8149BB7B1754CFE1005AB3C7 /* WindowControllers */,
+				819A1D0017522E9B00AF93C0 /* UtilityControllers */,
+				811170D817532EFA0073792B /* HelperControllers */,
+				8121CBDF1746576900D5B436 /* AppDelegate.h */,
+				8121CBE01746576900D5B436 /* AppDelegate.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		81E6841A175651C700E98E2F /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				8183CDE8174FA94C001A4BA5 /* Icon01.icns */,
+				81B475C71753B83500F69FF8 /* HFSUtilsIcon2.icns */,
+				81E6840D175616C100E98E2F /* HFSUtilsIcon3.icns */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8121CBC81746576900D5B436 /* HFSUtilsGUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8121CBE71746576900D5B436 /* Build configuration list for PBXNativeTarget "HFSUtilsGUI" */;
+			buildPhases = (
+				8121CBC51746576900D5B436 /* Sources */,
+				8121CBC61746576900D5B436 /* Frameworks */,
+				8121CBC71746576900D5B436 /* Resources */,
+				8121CBEA17465A4100D5B436 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HFSUtilsGUI;
+			productName = HFSUtilsGUI;
+			productReference = 8121CBC91746576900D5B436 /* HFSUtilsGUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8121CBC01746576800D5B436 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Zerogrey;
+			};
+			buildConfigurationList = 8121CBC31746576800D5B436 /* Build configuration list for PBXProject "HFSUtilsGUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8121CBBE1746576800D5B436;
+			productRefGroup = 8121CBCA1746576900D5B436 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8121CBC81746576900D5B436 /* HFSUtilsGUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8121CBC71746576900D5B436 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8121CBD81746576900D5B436 /* InfoPlist.strings in Resources */,
+				8121CBDE1746576900D5B436 /* Credits.rtf in Resources */,
+				8121CBE41746576900D5B436 /* MainMenu.xib in Resources */,
+				8121CC1A17465AB500D5B436 /* hattrib in Resources */,
+				8121CC1B17465AB500D5B436 /* hcd in Resources */,
+				8121CC1C17465AB500D5B436 /* hcopy in Resources */,
+				8121CC1D17465AB500D5B436 /* hdel in Resources */,
+				8121CC1E17465AB500D5B436 /* hdir in Resources */,
+				8121CC1F17465AB500D5B436 /* hformat in Resources */,
+				8121CC2017465AB500D5B436 /* hfsutil in Resources */,
+				8121CC2117465AB500D5B436 /* hls in Resources */,
+				8121CC2217465AB500D5B436 /* hmkdir in Resources */,
+				8121CC2317465AB500D5B436 /* hmount in Resources */,
+				8121CC2417465AB500D5B436 /* hpwd in Resources */,
+				8121CC2517465AB500D5B436 /* hrename in Resources */,
+				8121CC2617465AB500D5B436 /* hrmdir in Resources */,
+				8121CC2717465AB500D5B436 /* humount in Resources */,
+				8121CC2817465AB500D5B436 /* hvol in Resources */,
+				8183CDE9174FA94C001A4BA5 /* Icon01.icns in Resources */,
+				81B475C61753B60D00F69FF8 /* CustomDiskSizeWindow.xib in Resources */,
+				81B475C81753B83500F69FF8 /* HFSUtilsIcon2.icns in Resources */,
+				8149BB801754D088005AB3C7 /* CreateImageWindow.xib in Resources */,
+				81E6840E175616C100E98E2F /* HFSUtilsIcon3.icns in Resources */,
+				81CA8BA41756665500565AB4 /* HFSProject.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8121CBC51746576900D5B436 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8121CBDA1746576900D5B436 /* main.m in Sources */,
+				8121CBE11746576900D5B436 /* AppDelegate.m in Sources */,
+				8183CDF1174FCC21001A4BA5 /* ImageUtility.m in Sources */,
+				819A1CFF17522E5400AF93C0 /* CustomDiskSizeWindowController.m in Sources */,
+				811170DB17532F740073792B /* NumberFieldFormatter.m in Sources */,
+				8149BB7E1754D06E005AB3C7 /* CreateImageWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8121CBD61746576900D5B436 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8121CBD71746576900D5B436 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8121CBDC1746576900D5B436 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8121CBDD1746576900D5B436 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		8121CBE21746576900D5B436 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8121CBE31746576900D5B436 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8121CBE51746576900D5B436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8121CBE61746576900D5B436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8121CBE81746576900D5B436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HFSUtilsGUI/HFSUtilsGUI-Prefix.pch";
+				INFOPLIST_FILE = "HFSUtilsGUI/HFSUtilsGUI-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8121CBE91746576900D5B436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HFSUtilsGUI/HFSUtilsGUI-Prefix.pch";
+				INFOPLIST_FILE = "HFSUtilsGUI/HFSUtilsGUI-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8121CBC31746576800D5B436 /* Build configuration list for PBXProject "HFSUtilsGUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8121CBE51746576900D5B436 /* Debug */,
+				8121CBE61746576900D5B436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8121CBE71746576900D5B436 /* Build configuration list for PBXNativeTarget "HFSUtilsGUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8121CBE81746576900D5B436 /* Debug */,
+				8121CBE91746576900D5B436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8121CBC01746576800D5B436 /* Project object */;
+}
