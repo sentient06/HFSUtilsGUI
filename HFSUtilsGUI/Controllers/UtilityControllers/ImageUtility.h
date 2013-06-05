@@ -51,6 +51,7 @@ enum SizeUnits {
     
     NSString * ddPath;
     NSString * pvPath;
+    NSString * hdiutilPath;
     
     NSString * hformatPath;
     NSString * hmountPath;
@@ -83,7 +84,9 @@ enum SizeUnits {
 //------------------------------------------------------------------------------
 // Actions
 
-- (void)generateImage;
+- (void)generateBlankImage;
 - (void)formatHFS;
+- (void)generateHFSImage;
+- (void)generateHFSPlusImage;
 
 @end

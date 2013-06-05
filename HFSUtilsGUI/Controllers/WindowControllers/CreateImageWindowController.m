@@ -134,7 +134,7 @@
         
         self.currentProgress = 0;
         self.currentStep = @"Initialising...";
-        self.actionTitle = [NSString stringWithFormat: @"Creating image %@", volumeLabel];
+        self.actionTitle = [NSString stringWithFormat: @"Creating %@ image \"%@\"", fileSystem, volumeLabel];
         
     }
     
@@ -195,8 +195,11 @@
 //    [_currentProgressBar setUsesThreadedAnimation:YES];
     [_currentProgressBar startAnimation:self];
 
-    [imageUtility generateImage];
-    [imageUtility formatHFS];
+    if ([[imageUtility fileSystem] isEqualToString:@"HFS"]) {
+        [imageUtility generateHFSImage];
+    } else if ([[imageUtility fileSystem] isEqualToString:@"HFS+"]) {
+        [imageUtility generateHFSPlusImage];
+    }    
     
     [self release];
 }

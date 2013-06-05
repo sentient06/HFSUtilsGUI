@@ -100,6 +100,8 @@
     NSLog(@"%@", [customSizeTextField stringValue]);
     NSLog(@"%@", [customSizeUnitPopUp titleOfSelectedItem]);
 
+//    The image size was changed to 5.2 MB because that is the minimum image size.
+    
     [self setPopUpSizeTitle:[
             NSString stringWithFormat:@"Custom... (%@ %@)",
             [customSizeTextField stringValue],

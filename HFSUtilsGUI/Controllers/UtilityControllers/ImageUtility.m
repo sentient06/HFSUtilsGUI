@@ -81,14 +81,18 @@
 - (id)init {
     self = [super init];
     if (self) {
-        ddPath = [[NSString alloc] initWithString:@"/bin/dd"];
-        pvPath = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"pv" ]];
+        
+        ddPath      = [[NSString alloc] initWithString:@"/bin/dd"];
+        hdiutilPath = [[NSString alloc] initWithString:@"/usr/bin/hdiutil"];
+        pvPath      = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"pv" ]];
+        
         hformatPath = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/hformat" ]];
         hmountPath  = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/hmount" ]];
         hcdPath     = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/hcd" ]];
         hmkdirPath  = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/hmkdir" ]];
         hcopyPath   = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/hcopy" ]];
         humountPath = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/humount" ]];
+        
         _currentActionProgress = 0;
     }
     return self;
@@ -102,7 +106,7 @@
  * @method      generateImage
  * @abstract    Creates an empty file with 'dd'.
  */
-- (void)generateImage {
+- (void)generateBlankImage {
     
     // /bin/dd if=/dev/zero bs=1048576 count=500 |/Users/gian/Desktop/pv -cb|/bin/dd of=/Users/gian/Desktop/TestDisk.img
     
@@ -125,12 +129,6 @@
             volumeBS = 1073741824;
         break;
     }
-    
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // Testing progress
-
-        
-    
     
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // Tasks
@@ -274,6 +272,137 @@
     [fileSystemTask launch];
     [fileSystemTask waitUntilExit];
 
+    NSLog(@"Image formated!");
+    
+}
+
+/*!
+ * @method      generateHFSImage
+ * @abstract    Creates a HFS formated disk image.
+ */
+- (void)generateHFSImage {
+    [self generateBlankImage];
+    [self formatHFS];
+}
+
+/*!
+ * @method      generateHFSPlusImage
+ * @abstract    Creates a HFS+ formated disk image.
+ */
+- (void)generateHFSPlusImage {
+    
+    NSString * sizeParam;
+    
+    switch (volumeSizeUnity) {
+        default:
+        case Bytes:
+            sizeParam = @"";
+            break;
+        case KyloBytes:
+            sizeParam = @"K";
+            break;
+        case MegaBytes:
+            sizeParam = @"M";
+            break;
+        case Gigabytes:
+            sizeParam = @"G";
+            break;
+    }
+    
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Tasks
+    
+    NSTask * fileSystemTask = [[[NSTask alloc] init] autorelease];
+    NSPipe * hdiutilStdoutPipe = [NSPipe pipe];
+    NSPipe * hdiutilStderrPipe = [NSPipe pipe];
+    
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Formats to HFS+
+    
+    NSLog(@"Formating with HFS+");
+    self.currentActionDescription = @"Creating image formated with HFS+...";
+    
+    NSLog(@"create \"%@\" -ov -volname \"%@\" -fs HFS+ -size %d%@ -layout SPUD", pathToFile, volumeLabel, volumeSize, sizeParam);
+    
+    [fileSystemTask setLaunchPath:hdiutilPath];
+    [fileSystemTask setArguments:
+        [NSArray arrayWithObjects:
+             @"create"
+           , pathToFile
+           , @"-ov"
+           , @"-volname"
+           , volumeLabel
+           , @"-fs"
+           , @"HFS+"
+           , @"-size"
+           , [NSString stringWithFormat:@"%d%@", volumeSize, sizeParam]
+           , @"-layout"
+           , @"SPUD"
+           , @"-puppetstrings"
+           , nil
+        ]
+    ];
+    [fileSystemTask setStandardOutput:hdiutilStdoutPipe];
+    [fileSystemTask setStandardError: hdiutilStderrPipe];
+    
+    NSFileHandle * hdiutilOutpt = [hdiutilStdoutPipe fileHandleForReading];
+    NSFileHandle * hdiutilError = [hdiutilStderrPipe fileHandleForReading];
+    
+    [hdiutilOutpt waitForDataInBackgroundAndNotify];
+    [hdiutilError waitForDataInBackgroundAndNotify];
+    
+    __block ImageUtility * blockSafeSelf = self;
+    
+    id myBlock = [^(NSNotification *note) {
+        
+        NSData   * progressData = [hdiutilOutpt availableData];
+        NSString * progressStr  = [
+            [NSString alloc] initWithData:progressData
+            encoding:NSUTF8StringEncoding
+        ];
+        
+        if (![progressStr isEqualToString:@""]
+            && ![progressStr isEqualTo:nil] ) {
+            NSRange colonPosition = [progressStr rangeOfString:@":"];
+            if(colonPosition.location != NSNotFound){
+                NSString * percentageToParse = [progressStr substringFromIndex:colonPosition.location+1];
+                
+//                NSLog(@"-> %@", percentageToParse);
+
+                NSDecimalNumber * amountNumber = [NSDecimalNumber decimalNumberWithString:percentageToParse];
+
+                blockSafeSelf.currentActionProgress = [amountNumber doubleValue] < 0 ? [NSDecimalNumber decimalNumberWithString:@"100"] : amountNumber;
+                
+//                NSLog(@"+--- %@", progressStr);
+//                NSLog(@"| -- %@", amountNumber);
+//                NSLog(@"+--- %@", blockSafeSelf->_currentActionProgress);
+            } else {
+                blockSafeSelf.currentActionDescription = @"Finishing...";
+            }
+        }
+        [progressStr release];
+        [hdiutilOutpt waitForDataInBackgroundAndNotify];
+    } copy ];// autorelease];
+
+    // Observes progress:
+    
+    [ [NSNotificationCenter defaultCenter]
+          addObserverForName:NSFileHandleDataAvailableNotification
+                      object:hdiutilOutpt
+                       queue:nil
+                  usingBlock:myBlock
+    ];
+    
+    // Launches tasks:
+
+    [fileSystemTask launch];
+    [fileSystemTask waitUntilExit];
+    
+    // Removes objects:
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:NSFileHandleDataAvailableNotification];
+    [myBlock release];
+    
     NSLog(@"Image formated!");
     
 }
