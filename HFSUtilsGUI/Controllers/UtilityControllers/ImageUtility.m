@@ -47,7 +47,7 @@
           , currentActionDescription; //NSString
 @synthesize volumeSize
           , volumeSizeUnity
-          , currentActionProgress; //int
+          , currentActionProgress = _currentActionProgress; //int
 
 //------------------------------------------------------------------------------
 // Methods
@@ -59,6 +59,8 @@
  * @discussion  Always in the top of the files!
  */
 - (void) dealloc {
+    [ddPath release];
+    [pvPath release];
     [hformatPath release];
     [hmountPath release];
     [hcdPath release];
@@ -79,13 +81,15 @@
 - (id)init {
     self = [super init];
     if (self) {
+        ddPath = [[NSString alloc] initWithString:@"/bin/dd"];
+        pvPath = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"pv" ]];
         hformatPath = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/hformat" ]];
         hmountPath  = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/hmount" ]];
         hcdPath     = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/hcd" ]];
         hmkdirPath  = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/hmkdir" ]];
         hcopyPath   = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/hcopy" ]];
         humountPath = [[NSString alloc] initWithString:[[ NSBundle mainBundle ] pathForAuxiliaryExecutable: @"HFSTools/humount" ]];
-        currentActionProgress = 0;
+        _currentActionProgress = 0;
     }
     return self;
 }
@@ -99,6 +103,8 @@
  * @abstract    Creates an empty file with 'dd'.
  */
 - (void)generateImage {
+    
+    // /bin/dd if=/dev/zero bs=1048576 count=500 |/Users/gian/Desktop/pv -cb|/bin/dd of=/Users/gian/Desktop/TestDisk.img
     
     NSLog(@"GENERATE");
     
@@ -119,34 +125,123 @@
             volumeBS = 1073741824;
         break;
     }
+    
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Testing progress
 
+        
+    
+    
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // Tasks
     
-    NSTask * imageTask = [[[NSTask alloc] init] autorelease];
+    NSTask * d1Task = [[[NSTask alloc] init] autorelease];
+    NSTask * pvTask = [[[NSTask alloc] init] autorelease];
+    NSTask * d2Task = [[[NSTask alloc] init] autorelease];
+    
+    // Pipes
+    NSPipe * dd_to_pvPipe = [NSPipe pipe];
+    NSPipe * pv_to_ddPipe = [NSPipe pipe];
+    NSPipe * pvStderrPipe = [NSPipe pipe];
     
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // Creates empty image
     
+    // Sets the tasks' details:
+    
     NSLog(@"Creating empty image of %d x %d", volumeSize, volumeBS );
     self.currentActionDescription = @"Writting blocks to file...";
-    self.currentActionProgress = 1;
     
-    [imageTask setLaunchPath:@"/bin/dd"];
-    [imageTask setArguments:
+    [d1Task setLaunchPath:ddPath];
+    [pvTask setLaunchPath:pvPath];
+    [d2Task setLaunchPath:ddPath];
+    
+    [d1Task setArguments:
         [NSArray arrayWithObjects:
              @"if=/dev/zero"
-           , [NSString stringWithFormat:@"of=%@", pathToFile]
            , [NSString stringWithFormat:@"bs=%d", volumeBS]
            , [NSString stringWithFormat:@"count=%d", volumeSize]
            ,nil
         ]
     ];
-    [imageTask launch];
-    [imageTask waitUntilExit];
+    
+    [d2Task setArguments:
+        [NSArray arrayWithObjects:
+            [NSString stringWithFormat:@"of=%@", pathToFile]
+           ,nil
+        ]
+    ];
+    
+    [pvTask setArguments:
+        [NSArray arrayWithObjects:
+             @"-Wn"
+           , [NSString stringWithFormat:@"-s %lu", volumeBS * volumeSize]
+           , nil
+        ]
+    ];
 
+    // Associates pipes:
+    
+    [d1Task setStandardOutput: dd_to_pvPipe];
+    [pvTask setStandardInput : dd_to_pvPipe];
+    [pvTask setStandardOutput: pv_to_ddPipe];
+    [pvTask setStandardError : pvStderrPipe];
+    [d2Task setStandardInput : pv_to_ddPipe];
+    
+    // Block to check progress:
+
+    NSFileHandle * pvError = [pvStderrPipe fileHandleForReading];
+
+    [pvError waitForDataInBackgroundAndNotify];
+    
+    __block ImageUtility * blockSafeSelf = self;
+    
+    id myBlock = [^(NSNotification *note) {
+        
+        NSData   * progressData = [pvError availableData];
+        NSString * progressStr  = [
+            [NSString alloc] initWithData:progressData
+            encoding:NSUTF8StringEncoding
+        ];
+        if (![progressStr isEqualToString:@""]
+            && ![progressStr isEqualTo:nil] ) {
+            
+            NSDecimalNumber * amountNumber = [NSDecimalNumber decimalNumberWithString:progressStr];
+
+            blockSafeSelf.currentActionProgress = amountNumber;
+//            NSLog(@"+--- %@", progressStr);
+//            NSLog(@"| -- %@", amountNumber);
+//            NSLog(@"+--- %@", blockSafeSelf->_currentActionProgress);
+        }
+        [progressStr release];
+        [pvError waitForDataInBackgroundAndNotify];
+    } copy ];// autorelease];
+
+    // Observes progress:
+    
+    [ [NSNotificationCenter defaultCenter]
+          addObserverForName:NSFileHandleDataAvailableNotification
+                      object:pvError
+                       queue:nil
+                  usingBlock:myBlock
+    ];
+    
+    // Launches tasks:
+    
+    [d1Task launch];
+    [pvTask launch];
+    [d2Task launch];
+    
+    [d1Task waitUntilExit];
+    [pvTask waitUntilExit];
+    [d2Task waitUntilExit];
+    
+    // Removes objects:
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:NSFileHandleDataAvailableNotification];
+    [myBlock release];
+    
     NSLog(@"Image saved!");
-    self.currentActionProgress = 2;
     
 }
 
@@ -166,7 +261,6 @@
 
     NSLog(@"Formating with HFS");
     self.currentActionDescription = @"Formating with HFS...";
-    self.currentActionProgress = 3;
 
     [fileSystemTask setLaunchPath:hformatPath];
     [fileSystemTask setArguments:
@@ -181,7 +275,7 @@
     [fileSystemTask waitUntilExit];
 
     NSLog(@"Image formated!");
-    self.currentActionProgress = 4;
+    
 }
 
 //- (void)generic {

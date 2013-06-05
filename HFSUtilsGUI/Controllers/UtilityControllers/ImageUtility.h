@@ -49,12 +49,18 @@ enum SizeUnits {
 
     // HFSUtils path - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
+    NSString * ddPath;
+    NSString * pvPath;
+    
     NSString * hformatPath;
     NSString * hmountPath;
     NSString * hcdPath;
     NSString * hmkdirPath;
     NSString * hcopyPath;
     NSString * humountPath;
+    
+    BOOL running;
+    unsigned long long currentFileSize;
 
 }
 
@@ -70,7 +76,9 @@ enum SizeUnits {
 
 @property int volumeSize
             , volumeSizeUnity
-            , currentActionProgress;
+            ;
+
+@property (copy, nonatomic) NSDecimalNumber * currentActionProgress;
 
 //------------------------------------------------------------------------------
 // Actions

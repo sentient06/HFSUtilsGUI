@@ -39,7 +39,7 @@
  *              generating the required file.
  */
 @interface CreateImageWindowController : NSWindowController {
-    IBOutlet NSProgressIndicator * currentProgressBar;
+//    IBOutlet NSProgressIndicator * currentProgressBar;
 }
 //------------------------------------------------------------------------------
 // Properties
@@ -47,6 +47,8 @@
 @property (retain) ImageUtility * imageUtility;
 @property (copy) NSString * currentStep, * actionTitle;
 @property int currentProgress;
+
+@property (assign) IBOutlet NSProgressIndicator * currentProgressBar;
 
 //------------------------------------------------------------------------------
 // Interface actions

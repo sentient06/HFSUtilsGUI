@@ -44,9 +44,11 @@
 		8121CC3517465AF300D5B436 /* hrmdir in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1717465AB500D5B436 /* hrmdir */; };
 		8121CC3617465AF300D5B436 /* humount in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1817465AB500D5B436 /* humount */; };
 		8121CC3717465AF300D5B436 /* hvol in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1917465AB500D5B436 /* hvol */; };
+		8130C20C175A527E00D54D24 /* pv in Resources */ = {isa = PBXBuildFile; fileRef = 8130C20B175A527E00D54D24 /* pv */; };
+		8130C20E175A52AA00D54D24 /* pv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8130C20B175A527E00D54D24 /* pv */; };
 		8149BB7E1754D06E005AB3C7 /* CreateImageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8149BB7D1754D06E005AB3C7 /* CreateImageWindowController.m */; };
 		8149BB801754D088005AB3C7 /* CreateImageWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8149BB7F1754D088005AB3C7 /* CreateImageWindow.xib */; };
-		8183CDE9174FA94C001A4BA5 /* Icon01.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8183CDE8174FA94C001A4BA5 /* Icon01.icns */; };
+		8160C54B175F7668007001CF /* HFSFileIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8160C54A175F7668007001CF /* HFSFileIcon.icns */; };
 		8183CDF1174FCC21001A4BA5 /* ImageUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8183CDF0174FCC21001A4BA5 /* ImageUtility.m */; };
 		819A1CFF17522E5400AF93C0 /* CustomDiskSizeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A1CFE17522E5400AF93C0 /* CustomDiskSizeWindowController.m */; };
 		81B475C61753B60D00F69FF8 /* CustomDiskSizeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B475C51753B60D00F69FF8 /* CustomDiskSizeWindow.xib */; };
@@ -77,6 +79,16 @@
 				8121CC3517465AF300D5B436 /* hrmdir in CopyFiles */,
 				8121CC3617465AF300D5B436 /* humount in CopyFiles */,
 				8121CC3717465AF300D5B436 /* hvol in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8130C20D175A529400D54D24 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				8130C20E175A52AA00D54D24 /* pv in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,10 +125,11 @@
 		8121CC1717465AB500D5B436 /* hrmdir */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hrmdir; sourceTree = "<group>"; };
 		8121CC1817465AB500D5B436 /* humount */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = humount; sourceTree = "<group>"; };
 		8121CC1917465AB500D5B436 /* hvol */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hvol; sourceTree = "<group>"; };
+		8130C20B175A527E00D54D24 /* pv */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pv; sourceTree = "<group>"; };
 		8149BB7C1754D06E005AB3C7 /* CreateImageWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CreateImageWindowController.h; path = Controllers/WindowControllers/CreateImageWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8149BB7D1754D06E005AB3C7 /* CreateImageWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CreateImageWindowController.m; path = Controllers/WindowControllers/CreateImageWindowController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8149BB7F1754D088005AB3C7 /* CreateImageWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CreateImageWindow.xib; path = Views/CreateImageWindow.xib; sourceTree = "<group>"; };
-		8183CDE8174FA94C001A4BA5 /* Icon01.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Icon01.icns; path = HFSUtilsGUI/Images/Icons/Icon01.icns; sourceTree = "<group>"; };
+		8160C54A175F7668007001CF /* HFSFileIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = HFSFileIcon.icns; sourceTree = "<group>"; };
 		8183CDEF174FCC21001A4BA5 /* ImageUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ImageUtility.h; path = Controllers/UtilityControllers/ImageUtility.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8183CDF0174FCC21001A4BA5 /* ImageUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ImageUtility.m; path = Controllers/UtilityControllers/ImageUtility.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		819A1CFD17522E5400AF93C0 /* CustomDiskSizeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CustomDiskSizeWindowController.h; path = Controllers/WindowControllers/CustomDiskSizeWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -152,7 +165,7 @@
 		8121CBBE1746576800D5B436 = {
 			isa = PBXGroup;
 			children = (
-				8121CC0A17465AB500D5B436 /* HFSTools */,
+				8130C209175A526000D54D24 /* UnixTools */,
 				81E684191756515F00E98E2F /* Controllers */,
 				8141B387174E1C8800D89992 /* Views */,
 				8121CBD41746576900D5B436 /* Supporting Files */,
@@ -224,6 +237,15 @@
 			path = HFSTools;
 			sourceTree = "<group>";
 		};
+		8130C209175A526000D54D24 /* UnixTools */ = {
+			isa = PBXGroup;
+			children = (
+				8130C20B175A527E00D54D24 /* pv */,
+				8121CC0A17465AB500D5B436 /* HFSTools */,
+			);
+			name = UnixTools;
+			sourceTree = "<group>";
+		};
 		8141B387174E1C8800D89992 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,9 +304,9 @@
 		81E6841A175651C700E98E2F /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				8183CDE8174FA94C001A4BA5 /* Icon01.icns */,
 				81B475C71753B83500F69FF8 /* HFSUtilsIcon2.icns */,
 				81E6840D175616C100E98E2F /* HFSUtilsIcon3.icns */,
+				8160C54A175F7668007001CF /* HFSFileIcon.icns */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -299,6 +321,7 @@
 				8121CBC51746576900D5B436 /* Sources */,
 				8121CBC61746576900D5B436 /* Frameworks */,
 				8121CBC71746576900D5B436 /* Resources */,
+				8130C20D175A529400D54D24 /* CopyFiles */,
 				8121CBEA17465A4100D5B436 /* CopyFiles */,
 			);
 			buildRules = (
@@ -359,12 +382,13 @@
 				8121CC2617465AB500D5B436 /* hrmdir in Resources */,
 				8121CC2717465AB500D5B436 /* humount in Resources */,
 				8121CC2817465AB500D5B436 /* hvol in Resources */,
-				8183CDE9174FA94C001A4BA5 /* Icon01.icns in Resources */,
 				81B475C61753B60D00F69FF8 /* CustomDiskSizeWindow.xib in Resources */,
 				81B475C81753B83500F69FF8 /* HFSUtilsIcon2.icns in Resources */,
 				8149BB801754D088005AB3C7 /* CreateImageWindow.xib in Resources */,
 				81E6840E175616C100E98E2F /* HFSUtilsIcon3.icns in Resources */,
 				81CA8BA41756665500565AB4 /* HFSProject.png in Resources */,
+				8130C20C175A527E00D54D24 /* pv in Resources */,
+				8160C54B175F7668007001CF /* HFSFileIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

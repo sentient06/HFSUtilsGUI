@@ -52,7 +52,7 @@
 						<object class="NSTextField" id="998176650">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{41, 84}, {322, 17}}</string>
+							<string key="NSFrame">{{17, 84}, {346, 17}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="900798404"/>
@@ -98,7 +98,7 @@
 							<reference key="NSNextKeyView" ref="650802014"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSViewCanDrawConcurrently">YES</bool>
-							<int key="NSpiFlags">16650</int>
+							<int key="NSpiFlags">16648</int>
 							<double key="NSMaxValue">100</double>
 						</object>
 						<object class="NSTextField" id="650802014">
@@ -147,23 +147,11 @@
 								<int key="NSPeriodicInterval">25</int>
 							</object>
 						</object>
-						<object class="NSProgressIndicator" id="426960841">
-							<reference key="NSNextResponder" ref="1006"/>
-							<int key="NSvFlags">1292</int>
-							<object class="NSPSMatrix" key="NSDrawMatrix"/>
-							<string key="NSFrame">{{20, 85}, {16, 16}}</string>
-							<reference key="NSSuperview" ref="1006"/>
-							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="998176650"/>
-							<int key="NSViewLayerContentsRedrawPolicy">2</int>
-							<int key="NSpiFlags">20746</int>
-							<double key="NSMaxValue">100</double>
-						</object>
 					</array>
 					<string key="NSFrameSize">{380, 121}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
-					<reference key="NSNextKeyView" ref="426960841"/>
+					<reference key="NSNextKeyView" ref="998176650"/>
 					<bool key="NSViewIsLayerTreeHost">YES</bool>
 					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				</object>
@@ -185,9 +173,9 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">currentProgressBar</string>
 						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="426960841"/>
+						<reference key="destination" ref="900798404"/>
 					</object>
-					<int key="connectionID">24</int>
+					<int key="connectionID">27</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -204,22 +192,6 @@
 						</object>
 					</object>
 					<int key="connectionID">15</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: currentProgress</string>
-						<reference key="source" ref="900798404"/>
-						<reference key="destination" ref="1001"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="900798404"/>
-							<reference key="NSDestination" ref="1001"/>
-							<string key="NSLabel">value: currentProgress</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">currentProgress</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">26</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -276,11 +248,10 @@
 						<int key="objectID">2</int>
 						<reference key="object" ref="1006"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="998176650"/>
 							<reference ref="900798404"/>
 							<reference ref="650802014"/>
 							<reference ref="1062457614"/>
-							<reference ref="426960841"/>
+							<reference ref="998176650"/>
 						</array>
 						<reference key="parent" ref="1005"/>
 					</object>
@@ -328,11 +299,6 @@
 						<reference key="object" ref="684615696"/>
 						<reference key="parent" ref="1062457614"/>
 					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">21</int>
-						<reference key="object" ref="426960841"/>
-						<reference key="parent" ref="1006"/>
-					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -347,7 +313,6 @@
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="13.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="21.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="3.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<real value="0.0" key="3.IBViewIntegration.shadowBlurRadius"/>
 				<reference key="3.IBViewIntegration.shadowColor" ref="47063207"/>
@@ -355,6 +320,10 @@
 				<real value="0.0" key="3.IBViewIntegration.shadowOffsetWidth"/>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<real value="0.0" key="5.IBViewIntegration.shadowBlurRadius"/>
+				<reference key="5.IBViewIntegration.shadowColor" ref="47063207"/>
+				<real value="0.0" key="5.IBViewIntegration.shadowOffsetHeight"/>
+				<real value="0.0" key="5.IBViewIntegration.shadowOffsetWidth"/>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
@@ -362,7 +331,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">26</int>
+			<int key="maxID">27</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

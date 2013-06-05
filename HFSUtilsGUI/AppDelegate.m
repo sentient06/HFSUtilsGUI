@@ -152,6 +152,11 @@
             NSNumber          * sizeNumber     = [sizeFormatter numberFromString:[sizeData objectAtIndex:0]]; // 5
             NSString          * sizeUnitString = [sizeData objectAtIndex:1]; // MB
             
+            if ([[sizeData objectAtIndex:0] isEqualToString:@"1.44"]) {
+                sizeNumber = [NSNumber numberWithInt:1440];
+                sizeUnitString = @"KB";
+            }
+            
             int sizeUnitInt = 2;
 
             if ([sizeUnitString isEqualToString:@"KB"]) sizeUnitInt = 2;
@@ -160,6 +165,8 @@
             
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
             // Security measures:
+            
+            // 1509949 == 1.44MB (floppy)
             
             // Minimum required for HFSUtils is 800KB
             if (sizeUnitInt == 2 && [sizeNumber intValue] < 80 ) {
@@ -231,6 +238,19 @@
 }
 
 //------------------------------------------------------------------------------
+// Rewritten methods.
+
+#pragma mark – Rewritten methods
+
+/*!
+ * @abstract Quits application when window is closed.
+ * @link     Check XCode quick help.
+ */
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    return YES;
+}
+
+//------------------------------------------------------------------------------
 // Standard methods.
 
 #pragma mark – Standard methods
@@ -243,5 +263,6 @@
     [self setSizesListForImage:    [NSArray arrayWithObjects:@"5 MB", nil]];
     [self setAllowedFormatsOfImage:[NSArray arrayWithObjects:@"HFS", @"HFS+", nil]];
 }
+
 
 @end

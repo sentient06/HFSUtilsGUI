@@ -43,6 +43,7 @@
 @synthesize imageUtility; //ImageUtility
 @synthesize currentStep, actionTitle; //NSString
 @synthesize currentProgress; //int
+@synthesize currentProgressBar = _currentProgressBar;
 
 //------------------------------------------------------------------------------
 // Methods
@@ -54,7 +55,7 @@
  * @discussion  Always in the top of the files!
  */
 - (void)dealloc {
-
+    [_currentProgressBar stopAnimation:self];
     [imageUtility removeObserver:self forKeyPath:@"currentActionProgress"];
     [imageUtility removeObserver:self forKeyPath:@"currentActionDescription"];
     [imageUtility release];
@@ -154,8 +155,18 @@
                        context:(void *)context {
     
     if ([keyPath isEqualToString:@"currentActionProgress"]) {
-        self.currentProgress = [[object valueForKeyPath:keyPath] intValue] * 25;
-        [currentProgressBar setDoubleValue: [[object valueForKeyPath:keyPath] intValue] * 25];
+//        self.currentProgress = [[object valueForKeyPath:keyPath] intValue] * 25;
+        NSLog(@"- - - %@", [object valueForKeyPath:@"currentActionProgress"]);
+        [_currentProgressBar setDoubleValue:
+            [[object valueForKeyPath:keyPath] doubleValue]
+        ];
+
+//        while ([_currentProgressBar doubleValue] < [[object valueForKeyPath:keyPath] doubleValue]) {
+//            [_currentProgressBar incrementBy: 0.5];
+//            [_currentProgressBar display];
+////            [NSThread sleepForTimeInterval:0.5f];
+//        }
+        
         // This damn progress bar doesn't work properly. Research.
     }
 
@@ -180,13 +191,12 @@
     
     NSLog(@"%@", imageUtility);
 
-    [currentProgressBar setIndeterminate: YES];
-    [currentProgressBar startAnimation:self];
+    [_currentProgressBar setIndeterminate: NO];
+//    [_currentProgressBar setUsesThreadedAnimation:YES];
+    [_currentProgressBar startAnimation:self];
 
     [imageUtility generateImage];
     [imageUtility formatHFS];
-    
-    [currentProgressBar stopAnimation:self];
     
     [self release];
 }
