@@ -32,6 +32,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class ImageFilesOutlineViewController;
+
 /*!
  * @class       AppDelegate:
  * @abstract    Responsible for all the OS interaction, for short.
@@ -55,6 +57,8 @@
     IBOutlet NSPopUpButton * imageSize;
     IBOutlet NSPopUpButton * imageFsys;
     IBOutlet NSMenuItem    * imageSizeCustom;
+    
+    ImageFilesOutlineViewController * availableImages;
     
 }
 
@@ -80,11 +84,15 @@
 
 //------------------------------------------------------------------------------
 // Trigger to save image
+
 - (void) saveImageToPath:(NSURL*)filePath
                 withType:(NSString*)volumeType
                 andLabel:(NSString*)volumeLabel
                  andSize:(NSNumber*)volumeSize
                   inUnit:(int)sizeUnit
             onFileSystem:(NSString*)fileSystem;
+
+// Method to list currently mounted disks
+- (void) getAllMountedDiskImages;
 
 @end

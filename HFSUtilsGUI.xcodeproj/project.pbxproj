@@ -51,6 +51,9 @@
 		8160C54B175F7668007001CF /* HFSFileIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8160C54A175F7668007001CF /* HFSFileIcon.icns */; };
 		8183CDF1174FCC21001A4BA5 /* ImageUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8183CDF0174FCC21001A4BA5 /* ImageUtility.m */; };
 		819A1CFF17522E5400AF93C0 /* CustomDiskSizeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A1CFE17522E5400AF93C0 /* CustomDiskSizeWindowController.m */; };
+		81B38A0B1760ACFE002320C6 /* IconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B38A091760ACFE002320C6 /* IconCell.m */; };
+		81B38A131760AECA002320C6 /* ImageFilesOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B38A121760AECA002320C6 /* ImageFilesOutlineViewController.m */; };
+		81B38A181760AF26002320C6 /* ImageFileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B38A171760AF26002320C6 /* ImageFileModel.m */; };
 		81B475C61753B60D00F69FF8 /* CustomDiskSizeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B475C51753B60D00F69FF8 /* CustomDiskSizeWindow.xib */; };
 		81B475C81753B83500F69FF8 /* HFSUtilsIcon2.icns in Resources */ = {isa = PBXBuildFile; fileRef = 81B475C71753B83500F69FF8 /* HFSUtilsIcon2.icns */; };
 		81CA8BA41756665500565AB4 /* HFSProject.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CA8BA31756665500565AB4 /* HFSProject.png */; };
@@ -134,6 +137,12 @@
 		8183CDF0174FCC21001A4BA5 /* ImageUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ImageUtility.m; path = Controllers/UtilityControllers/ImageUtility.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		819A1CFD17522E5400AF93C0 /* CustomDiskSizeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CustomDiskSizeWindowController.h; path = Controllers/WindowControllers/CustomDiskSizeWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		819A1CFE17522E5400AF93C0 /* CustomDiskSizeWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CustomDiskSizeWindowController.m; path = Controllers/WindowControllers/CustomDiskSizeWindowController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		81B38A091760ACFE002320C6 /* IconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconCell.m; sourceTree = "<group>"; };
+		81B38A0A1760ACFE002320C6 /* IconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconCell.h; sourceTree = "<group>"; };
+		81B38A111760AECA002320C6 /* ImageFilesOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageFilesOutlineViewController.h; path = Controllers/UtilityControllers/ImageFilesOutlineViewController.h; sourceTree = "<group>"; };
+		81B38A121760AECA002320C6 /* ImageFilesOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageFilesOutlineViewController.m; path = Controllers/UtilityControllers/ImageFilesOutlineViewController.m; sourceTree = "<group>"; };
+		81B38A161760AF26002320C6 /* ImageFileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageFileModel.h; path = HFSUtilsGUI/Models/ImageFileModel.h; sourceTree = "<group>"; };
+		81B38A171760AF26002320C6 /* ImageFileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageFileModel.m; path = HFSUtilsGUI/Models/ImageFileModel.m; sourceTree = "<group>"; };
 		81B475C51753B60D00F69FF8 /* CustomDiskSizeWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomDiskSizeWindow.xib; path = Views/CustomDiskSizeWindow.xib; sourceTree = "<group>"; };
 		81B475C71753B83500F69FF8 /* HFSUtilsIcon2.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = HFSUtilsIcon2.icns; path = HFSUtilsGUI/Images/Icons/HFSUtilsIcon2.icns; sourceTree = "<group>"; };
 		81CA8BA31756665500565AB4 /* HFSProject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HFSProject.png; path = HFSUtilsGUI/Images/HFSProject.png; sourceTree = "<group>"; };
@@ -155,6 +164,8 @@
 		811170D817532EFA0073792B /* HelperControllers */ = {
 			isa = PBXGroup;
 			children = (
+				81B38A0A1760ACFE002320C6 /* IconCell.h */,
+				81B38A091760ACFE002320C6 /* IconCell.m */,
 				811170D917532F740073792B /* NumberFieldFormatter.h */,
 				811170DA17532F740073792B /* NumberFieldFormatter.m */,
 			);
@@ -165,6 +176,7 @@
 		8121CBBE1746576800D5B436 = {
 			isa = PBXGroup;
 			children = (
+				81B38A151760AEF6002320C6 /* Models */,
 				8130C209175A526000D54D24 /* UnixTools */,
 				81E684191756515F00E98E2F /* Controllers */,
 				8141B387174E1C8800D89992 /* Views */,
@@ -284,9 +296,20 @@
 			children = (
 				8183CDEF174FCC21001A4BA5 /* ImageUtility.h */,
 				8183CDF0174FCC21001A4BA5 /* ImageUtility.m */,
+				81B38A111760AECA002320C6 /* ImageFilesOutlineViewController.h */,
+				81B38A121760AECA002320C6 /* ImageFilesOutlineViewController.m */,
 			);
 			name = UtilityControllers;
 			path = HFSUtilsGUI;
+			sourceTree = "<group>";
+		};
+		81B38A151760AEF6002320C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81B38A161760AF26002320C6 /* ImageFileModel.h */,
+				81B38A171760AF26002320C6 /* ImageFileModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		81E684191756515F00E98E2F /* Controllers */ = {
@@ -405,6 +428,9 @@
 				819A1CFF17522E5400AF93C0 /* CustomDiskSizeWindowController.m in Sources */,
 				811170DB17532F740073792B /* NumberFieldFormatter.m in Sources */,
 				8149BB7E1754D06E005AB3C7 /* CreateImageWindowController.m in Sources */,
+				81B38A0B1760ACFE002320C6 /* IconCell.m in Sources */,
+				81B38A131760AECA002320C6 /* ImageFilesOutlineViewController.m in Sources */,
+				81B38A181760AF26002320C6 /* ImageFileModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

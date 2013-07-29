@@ -31,7 +31,9 @@
 //------------------------------------------------------------------------------
 
 #import "AppDelegate.h"
-#import "CreateImageWindowController.h" //Progress bar window
+#import "CreateImageWindowController.h"     //Progress bar window
+#import "ImageFileModel.h"                  //Mounted volume objects
+#import "ImageFilesOutlineViewController.h" //List of mounted volumes
 
 //------------------------------------------------------------------------------
 
@@ -237,6 +239,83 @@
     
 }
 
+/*!
+ * Working here now....
+ * The idea is to list all mounted images in the list visible in the interface.
+ * But this requires a bit of translating stuff from HDIUtils.
+ * hdiutil info -plist
+ */
+- (void)getAllMountedDiskImages {
+
+    // http://cocoadev.com/CocoaWrapperAroundConsoleApplication
+    
+    dispatch_async(queue, ^{
+        
+        
+        NSMutableArray * allMountedDisks = [[NSMutableArray alloc] initWithCapacity:1];
+        NSTask * task = [NSTask new];
+        [task setLaunchPath:@"/usr/bin/hdiutil"];
+        [task setArguments:[NSArray arrayWithObjects:@"info", @"-plist", nil]];
+        [task setStandardOutput:[NSPipe pipe]];
+        [task setStandardError:[task standardOutput]];
+        [task launch];
+        NSData       * plistData = [[[task standardOutput] fileHandleForReading] readDataToEndOfFile];
+        NSError      * error;
+        NSDictionary * plist = [NSPropertyListSerialization propertyListWithData:plistData options:0 format:nil error:&error];
+        
+//        NSLog( @"plist is %@", plist );
+        NSLog( @"plist is fine" );
+        
+        if(!plist) {
+            NSLog(@"Error: %@", error);
+        } else {
+//            ImageFilesOutlineViewController * mountedImages = [[ImageFilesOutlineViewController alloc] init];
+//            [mountedImages release];
+
+//            NSLog(@"%@", [plist objectForKey:@"images"]);
+            
+            for( id mountedDiskImage in [plist objectForKey:@"images"] ) {
+                
+                ImageFileModel * imageFile = [[ImageFileModel alloc] init];
+                
+                [imageFile setName:@"None"];
+                [imageFile setIconPath:[mountedDiskImage objectForKey:@"icon-path"]];
+                [imageFile setWriteable:NO]; // [mountedDiskImage objectForKey:@"writeable"]];
+                
+//                NSLog(@"%@", [mountedDiskImage objectForKey:@"image-path"]);
+//                NSLog(@"\n");
+//                NSLog(@"Icon path: %@", [mountedDiskImage objectForKey:@"icon-path"]);
+//                NSLog(@"Writeable: %@", [mountedDiskImage objectForKey:@"writeable"]);
+
+                for( id systemEntities in [mountedDiskImage objectForKey:@"system-entities"] ) {
+                    
+                    if ([[systemEntities objectForKey:@"content-hint"] isEqualToString:@"Apple_HFS"]) {
+//                        NSLog(@"Mount point: %@", [systemEntities objectForKey:@"mount-point"]);
+                        NSString * mountPoint = [systemEntities objectForKey:@"mount-point"];
+                        NSRange slashPosition = [mountPoint rangeOfString:@"/" options:NSBackwardsSearch];
+                        [imageFile setMountPoint:mountPoint];
+                        [imageFile setName:[mountPoint substringFromIndex:slashPosition.location+1]];
+                    }
+                    
+                }
+
+//                NSLog(@"Image file: %@", imageFile);
+                [allMountedDisks addObject:imageFile];
+                [imageFile release];
+                    
+            }
+            
+            NSLog(@"Total mounted images: %lu", [allMountedDisks count]);
+            [availableImages initWithArray:allMountedDisks];
+            
+        }
+
+//        [error release];
+        
+    });
+    
+}
+
 //------------------------------------------------------------------------------
 // Rewritten methods.
 
@@ -262,6 +341,9 @@
     [self setAllowedTypesOfImage:  [NSArray arrayWithObjects:@".dmg", @".img", nil]];
     [self setSizesListForImage:    [NSArray arrayWithObjects:@"5 MB", nil]];
     [self setAllowedFormatsOfImage:[NSArray arrayWithObjects:@"HFS", @"HFS+", nil]];
+    
+    [self getAllMountedDiskImages];
+    
 }
 
 
