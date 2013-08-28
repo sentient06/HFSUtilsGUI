@@ -29,6 +29,30 @@
 //  POSSIBILITY OF SUCH DAMAGE.
 //
 //------------------------------------------------------------------------------
+// Note on version numbering:
+//
+// There are 5 elements in the version number: 1.2.3s 004 where:
+//  1 ---> major version
+//  2 ---> minor version
+//  3 ---> revision (bug fixing)
+//  s ---> stage: alpha, beta or final (omitted)
+//  004 -> build
+//  
+// So, for example:
+//
+//  1.0.0a   is an alpha release, not public
+//  1.0.0b   is the first beta release, public
+//  1.0.0    is the final release based on 1.0.0b
+//  1.0.0a16 is the an alpha past 16 stages to fix bugs
+//  1.0.1b   is the beta bug-fixed version of the previous one
+//  1.1.0b   is a beta post-final release v1 with a major fix or new expected / planned feature
+//  1.1.0    is a final release based on v1, but with revisions
+//  2.0.0b   is the beta for a next version with new features
+//  etc.
+//------------------------------------------------------------------------------
+// Updates are on:
+// http://hfsutilsgui.mariot.me.uk
+//------------------------------------------------------------------------------
 
 #import <Cocoa/Cocoa.h>
 

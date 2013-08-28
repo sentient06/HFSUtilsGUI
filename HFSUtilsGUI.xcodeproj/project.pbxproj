@@ -14,41 +14,45 @@
 		8121CBDE1746576900D5B436 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8121CBDC1746576900D5B436 /* Credits.rtf */; };
 		8121CBE11746576900D5B436 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8121CBE01746576900D5B436 /* AppDelegate.m */; };
 		8121CBE41746576900D5B436 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8121CBE21746576900D5B436 /* MainMenu.xib */; };
-		8121CC1A17465AB500D5B436 /* hattrib in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC0B17465AB500D5B436 /* hattrib */; };
-		8121CC1B17465AB500D5B436 /* hcd in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC0C17465AB500D5B436 /* hcd */; };
-		8121CC1C17465AB500D5B436 /* hcopy in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC0D17465AB500D5B436 /* hcopy */; };
-		8121CC1D17465AB500D5B436 /* hdel in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC0E17465AB500D5B436 /* hdel */; };
-		8121CC1E17465AB500D5B436 /* hdir in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC0F17465AB500D5B436 /* hdir */; };
-		8121CC1F17465AB500D5B436 /* hformat in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1017465AB500D5B436 /* hformat */; };
-		8121CC2017465AB500D5B436 /* hfsutil in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1117465AB500D5B436 /* hfsutil */; };
-		8121CC2117465AB500D5B436 /* hls in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1217465AB500D5B436 /* hls */; };
-		8121CC2217465AB500D5B436 /* hmkdir in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1317465AB500D5B436 /* hmkdir */; };
-		8121CC2317465AB500D5B436 /* hmount in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1417465AB500D5B436 /* hmount */; };
-		8121CC2417465AB500D5B436 /* hpwd in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1517465AB500D5B436 /* hpwd */; };
-		8121CC2517465AB500D5B436 /* hrename in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1617465AB500D5B436 /* hrename */; };
-		8121CC2617465AB500D5B436 /* hrmdir in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1717465AB500D5B436 /* hrmdir */; };
-		8121CC2717465AB500D5B436 /* humount in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1817465AB500D5B436 /* humount */; };
-		8121CC2817465AB500D5B436 /* hvol in Resources */ = {isa = PBXBuildFile; fileRef = 8121CC1917465AB500D5B436 /* hvol */; };
-		8121CC2917465AF300D5B436 /* hattrib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC0B17465AB500D5B436 /* hattrib */; };
-		8121CC2A17465AF300D5B436 /* hcd in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC0C17465AB500D5B436 /* hcd */; };
-		8121CC2B17465AF300D5B436 /* hcopy in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC0D17465AB500D5B436 /* hcopy */; };
-		8121CC2C17465AF300D5B436 /* hdel in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC0E17465AB500D5B436 /* hdel */; };
-		8121CC2D17465AF300D5B436 /* hdir in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC0F17465AB500D5B436 /* hdir */; };
-		8121CC2E17465AF300D5B436 /* hformat in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1017465AB500D5B436 /* hformat */; };
-		8121CC2F17465AF300D5B436 /* hfsutil in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1117465AB500D5B436 /* hfsutil */; };
-		8121CC3017465AF300D5B436 /* hls in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1217465AB500D5B436 /* hls */; };
-		8121CC3117465AF300D5B436 /* hmkdir in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1317465AB500D5B436 /* hmkdir */; };
-		8121CC3217465AF300D5B436 /* hmount in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1417465AB500D5B436 /* hmount */; };
-		8121CC3317465AF300D5B436 /* hpwd in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1517465AB500D5B436 /* hpwd */; };
-		8121CC3417465AF300D5B436 /* hrename in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1617465AB500D5B436 /* hrename */; };
-		8121CC3517465AF300D5B436 /* hrmdir in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1717465AB500D5B436 /* hrmdir */; };
-		8121CC3617465AF300D5B436 /* humount in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1817465AB500D5B436 /* humount */; };
-		8121CC3717465AF300D5B436 /* hvol in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8121CC1917465AB500D5B436 /* hvol */; };
 		8130C20C175A527E00D54D24 /* pv in Resources */ = {isa = PBXBuildFile; fileRef = 8130C20B175A527E00D54D24 /* pv */; };
 		8130C20E175A52AA00D54D24 /* pv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8130C20B175A527E00D54D24 /* pv */; };
 		8149BB7E1754D06E005AB3C7 /* CreateImageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8149BB7D1754D06E005AB3C7 /* CreateImageWindowController.m */; };
 		8149BB801754D088005AB3C7 /* CreateImageWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8149BB7F1754D088005AB3C7 /* CreateImageWindow.xib */; };
 		8160C54B175F7668007001CF /* HFSFileIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8160C54A175F7668007001CF /* HFSFileIcon.icns */; };
+		8168990D17CDF5DF00058B9F /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 8168990C17CDF5DF00058B9F /* dsa_pub.pem */; };
+		8168991D17CDF5F400058B9F /* hattrib in Resources */ = {isa = PBXBuildFile; fileRef = 8168990E17CDF5F400058B9F /* hattrib */; };
+		8168991E17CDF5F400058B9F /* hcd in Resources */ = {isa = PBXBuildFile; fileRef = 8168990F17CDF5F400058B9F /* hcd */; };
+		8168991F17CDF5F400058B9F /* hcopy in Resources */ = {isa = PBXBuildFile; fileRef = 8168991017CDF5F400058B9F /* hcopy */; };
+		8168992017CDF5F400058B9F /* hdel in Resources */ = {isa = PBXBuildFile; fileRef = 8168991117CDF5F400058B9F /* hdel */; };
+		8168992117CDF5F400058B9F /* hdir in Resources */ = {isa = PBXBuildFile; fileRef = 8168991217CDF5F400058B9F /* hdir */; };
+		8168992217CDF5F400058B9F /* hformat in Resources */ = {isa = PBXBuildFile; fileRef = 8168991317CDF5F400058B9F /* hformat */; };
+		8168992317CDF5F400058B9F /* hfsutil in Resources */ = {isa = PBXBuildFile; fileRef = 8168991417CDF5F400058B9F /* hfsutil */; };
+		8168992417CDF5F400058B9F /* hls in Resources */ = {isa = PBXBuildFile; fileRef = 8168991517CDF5F400058B9F /* hls */; };
+		8168992517CDF5F400058B9F /* hmkdir in Resources */ = {isa = PBXBuildFile; fileRef = 8168991617CDF5F400058B9F /* hmkdir */; };
+		8168992617CDF5F400058B9F /* hmount in Resources */ = {isa = PBXBuildFile; fileRef = 8168991717CDF5F400058B9F /* hmount */; };
+		8168992717CDF5F400058B9F /* hpwd in Resources */ = {isa = PBXBuildFile; fileRef = 8168991817CDF5F400058B9F /* hpwd */; };
+		8168992817CDF5F400058B9F /* hrename in Resources */ = {isa = PBXBuildFile; fileRef = 8168991917CDF5F400058B9F /* hrename */; };
+		8168992917CDF5F400058B9F /* hrmdir in Resources */ = {isa = PBXBuildFile; fileRef = 8168991A17CDF5F400058B9F /* hrmdir */; };
+		8168992A17CDF5F400058B9F /* humount in Resources */ = {isa = PBXBuildFile; fileRef = 8168991B17CDF5F400058B9F /* humount */; };
+		8168992B17CDF5F400058B9F /* hvol in Resources */ = {isa = PBXBuildFile; fileRef = 8168991C17CDF5F400058B9F /* hvol */; };
+		8168992C17CDF60700058B9F /* hattrib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168990E17CDF5F400058B9F /* hattrib */; };
+		8168992D17CDF60700058B9F /* hcd in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168990F17CDF5F400058B9F /* hcd */; };
+		8168992E17CDF60700058B9F /* hcopy in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991017CDF5F400058B9F /* hcopy */; };
+		8168992F17CDF60700058B9F /* hdel in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991117CDF5F400058B9F /* hdel */; };
+		8168993017CDF60700058B9F /* hdir in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991217CDF5F400058B9F /* hdir */; };
+		8168993117CDF60700058B9F /* hformat in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991317CDF5F400058B9F /* hformat */; };
+		8168993217CDF60700058B9F /* hfsutil in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991417CDF5F400058B9F /* hfsutil */; };
+		8168993317CDF60700058B9F /* hls in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991517CDF5F400058B9F /* hls */; };
+		8168993417CDF60700058B9F /* hmkdir in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991617CDF5F400058B9F /* hmkdir */; };
+		8168993517CDF60700058B9F /* hmount in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991717CDF5F400058B9F /* hmount */; };
+		8168993617CDF60700058B9F /* hpwd in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991817CDF5F400058B9F /* hpwd */; };
+		8168993717CDF60700058B9F /* hrename in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991917CDF5F400058B9F /* hrename */; };
+		8168993817CDF60700058B9F /* hrmdir in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991A17CDF5F400058B9F /* hrmdir */; };
+		8168993917CDF60700058B9F /* humount in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991B17CDF5F400058B9F /* humount */; };
+		8168993A17CDF60700058B9F /* hvol in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168991C17CDF5F400058B9F /* hvol */; };
+		8168994517CDF75C00058B9F /* dsa_pub.pem in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168990C17CDF5DF00058B9F /* dsa_pub.pem */; };
+		8168994717CDF79900058B9F /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8168994617CDF79900058B9F /* Sparkle.framework */; };
+		8168994817CDF80E00058B9F /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8168994617CDF79900058B9F /* Sparkle.framework */; };
 		8183CDF1174FCC21001A4BA5 /* ImageUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8183CDF0174FCC21001A4BA5 /* ImageUtility.m */; };
 		819A1CFF17522E5400AF93C0 /* CustomDiskSizeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819A1CFE17522E5400AF93C0 /* CustomDiskSizeWindowController.m */; };
 		81B38A0B1760ACFE002320C6 /* IconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B38A091760ACFE002320C6 /* IconCell.m */; };
@@ -67,21 +71,21 @@
 			dstPath = HFSTools;
 			dstSubfolderSpec = 6;
 			files = (
-				8121CC2917465AF300D5B436 /* hattrib in CopyFiles */,
-				8121CC2A17465AF300D5B436 /* hcd in CopyFiles */,
-				8121CC2B17465AF300D5B436 /* hcopy in CopyFiles */,
-				8121CC2C17465AF300D5B436 /* hdel in CopyFiles */,
-				8121CC2D17465AF300D5B436 /* hdir in CopyFiles */,
-				8121CC2E17465AF300D5B436 /* hformat in CopyFiles */,
-				8121CC2F17465AF300D5B436 /* hfsutil in CopyFiles */,
-				8121CC3017465AF300D5B436 /* hls in CopyFiles */,
-				8121CC3117465AF300D5B436 /* hmkdir in CopyFiles */,
-				8121CC3217465AF300D5B436 /* hmount in CopyFiles */,
-				8121CC3317465AF300D5B436 /* hpwd in CopyFiles */,
-				8121CC3417465AF300D5B436 /* hrename in CopyFiles */,
-				8121CC3517465AF300D5B436 /* hrmdir in CopyFiles */,
-				8121CC3617465AF300D5B436 /* humount in CopyFiles */,
-				8121CC3717465AF300D5B436 /* hvol in CopyFiles */,
+				8168992C17CDF60700058B9F /* hattrib in CopyFiles */,
+				8168992D17CDF60700058B9F /* hcd in CopyFiles */,
+				8168992E17CDF60700058B9F /* hcopy in CopyFiles */,
+				8168992F17CDF60700058B9F /* hdel in CopyFiles */,
+				8168993017CDF60700058B9F /* hdir in CopyFiles */,
+				8168993117CDF60700058B9F /* hformat in CopyFiles */,
+				8168993217CDF60700058B9F /* hfsutil in CopyFiles */,
+				8168993317CDF60700058B9F /* hls in CopyFiles */,
+				8168993417CDF60700058B9F /* hmkdir in CopyFiles */,
+				8168993517CDF60700058B9F /* hmount in CopyFiles */,
+				8168993617CDF60700058B9F /* hpwd in CopyFiles */,
+				8168993717CDF60700058B9F /* hrename in CopyFiles */,
+				8168993817CDF60700058B9F /* hrmdir in CopyFiles */,
+				8168993917CDF60700058B9F /* humount in CopyFiles */,
+				8168993A17CDF60700058B9F /* hvol in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +96,26 @@
 			dstSubfolderSpec = 6;
 			files = (
 				8130C20E175A52AA00D54D24 /* pv in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81FC03DC17CB52BF0014C14B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8168994817CDF80E00058B9F /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81FC03E217CB549E0014C14B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				8168994517CDF75C00058B9F /* dsa_pub.pem in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,26 +137,28 @@
 		8121CBDF1746576900D5B436 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = AppDelegate.h; path = HFSUtilsGUI/AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8121CBE01746576900D5B436 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = AppDelegate.m; path = HFSUtilsGUI/AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8121CBE31746576900D5B436 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		8121CC0B17465AB500D5B436 /* hattrib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hattrib; sourceTree = "<group>"; };
-		8121CC0C17465AB500D5B436 /* hcd */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hcd; sourceTree = "<group>"; };
-		8121CC0D17465AB500D5B436 /* hcopy */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hcopy; sourceTree = "<group>"; };
-		8121CC0E17465AB500D5B436 /* hdel */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hdel; sourceTree = "<group>"; };
-		8121CC0F17465AB500D5B436 /* hdir */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hdir; sourceTree = "<group>"; };
-		8121CC1017465AB500D5B436 /* hformat */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hformat; sourceTree = "<group>"; };
-		8121CC1117465AB500D5B436 /* hfsutil */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hfsutil; sourceTree = "<group>"; };
-		8121CC1217465AB500D5B436 /* hls */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hls; sourceTree = "<group>"; };
-		8121CC1317465AB500D5B436 /* hmkdir */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hmkdir; sourceTree = "<group>"; };
-		8121CC1417465AB500D5B436 /* hmount */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hmount; sourceTree = "<group>"; };
-		8121CC1517465AB500D5B436 /* hpwd */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hpwd; sourceTree = "<group>"; };
-		8121CC1617465AB500D5B436 /* hrename */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hrename; sourceTree = "<group>"; };
-		8121CC1717465AB500D5B436 /* hrmdir */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hrmdir; sourceTree = "<group>"; };
-		8121CC1817465AB500D5B436 /* humount */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = humount; sourceTree = "<group>"; };
-		8121CC1917465AB500D5B436 /* hvol */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = hvol; sourceTree = "<group>"; };
-		8130C20B175A527E00D54D24 /* pv */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pv; sourceTree = "<group>"; };
+		8130C20B175A527E00D54D24 /* pv */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = pv; path = HFSUtilsGUI/Resources/UnixTools/pv; sourceTree = "<group>"; };
 		8149BB7C1754D06E005AB3C7 /* CreateImageWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CreateImageWindowController.h; path = Controllers/WindowControllers/CreateImageWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8149BB7D1754D06E005AB3C7 /* CreateImageWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CreateImageWindowController.m; path = Controllers/WindowControllers/CreateImageWindowController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8149BB7F1754D088005AB3C7 /* CreateImageWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CreateImageWindow.xib; path = Views/CreateImageWindow.xib; sourceTree = "<group>"; };
-		8160C54A175F7668007001CF /* HFSFileIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = HFSFileIcon.icns; sourceTree = "<group>"; };
+		8160C54A175F7668007001CF /* HFSFileIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = HFSFileIcon.icns; path = HFSUtilsGUI/Images/Icons/HFSFileIcon.icns; sourceTree = "<group>"; };
+		8168990C17CDF5DF00058B9F /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = HFSUtilsGUI/Resources/SparkleKey/dsa_pub.pem; sourceTree = "<group>"; };
+		8168990E17CDF5F400058B9F /* hattrib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hattrib; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hattrib; sourceTree = SOURCE_ROOT; };
+		8168990F17CDF5F400058B9F /* hcd */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hcd; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hcd; sourceTree = SOURCE_ROOT; };
+		8168991017CDF5F400058B9F /* hcopy */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hcopy; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hcopy; sourceTree = SOURCE_ROOT; };
+		8168991117CDF5F400058B9F /* hdel */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hdel; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hdel; sourceTree = SOURCE_ROOT; };
+		8168991217CDF5F400058B9F /* hdir */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hdir; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hdir; sourceTree = SOURCE_ROOT; };
+		8168991317CDF5F400058B9F /* hformat */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hformat; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hformat; sourceTree = SOURCE_ROOT; };
+		8168991417CDF5F400058B9F /* hfsutil */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hfsutil; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hfsutil; sourceTree = SOURCE_ROOT; };
+		8168991517CDF5F400058B9F /* hls */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hls; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hls; sourceTree = SOURCE_ROOT; };
+		8168991617CDF5F400058B9F /* hmkdir */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hmkdir; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hmkdir; sourceTree = SOURCE_ROOT; };
+		8168991717CDF5F400058B9F /* hmount */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hmount; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hmount; sourceTree = SOURCE_ROOT; };
+		8168991817CDF5F400058B9F /* hpwd */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hpwd; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hpwd; sourceTree = SOURCE_ROOT; };
+		8168991917CDF5F400058B9F /* hrename */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hrename; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hrename; sourceTree = SOURCE_ROOT; };
+		8168991A17CDF5F400058B9F /* hrmdir */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hrmdir; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hrmdir; sourceTree = SOURCE_ROOT; };
+		8168991B17CDF5F400058B9F /* humount */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = humount; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/humount; sourceTree = SOURCE_ROOT; };
+		8168991C17CDF5F400058B9F /* hvol */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = hvol; path = HFSUtilsGUI/Resources/UnixTools/HFSTools/hvol; sourceTree = SOURCE_ROOT; };
+		8168994617CDF79900058B9F /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = HFSUtilsGUI/Frameworks/Sparkle.framework; sourceTree = "<group>"; };
 		8183CDEF174FCC21001A4BA5 /* ImageUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ImageUtility.h; path = Controllers/UtilityControllers/ImageUtility.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8183CDF0174FCC21001A4BA5 /* ImageUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ImageUtility.m; path = Controllers/UtilityControllers/ImageUtility.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		819A1CFD17522E5400AF93C0 /* CustomDiskSizeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CustomDiskSizeWindowController.h; path = Controllers/WindowControllers/CustomDiskSizeWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -155,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8121CBCE1746576900D5B436 /* Cocoa.framework in Frameworks */,
+				8168994717CDF79900058B9F /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,8 +203,8 @@
 		8121CBBE1746576800D5B436 = {
 			isa = PBXGroup;
 			children = (
+				81FC03DE17CB53E70014C14B /* Resources */,
 				81B38A151760AEF6002320C6 /* Models */,
-				8130C209175A526000D54D24 /* UnixTools */,
 				81E684191756515F00E98E2F /* Controllers */,
 				8141B387174E1C8800D89992 /* Views */,
 				8121CBD41746576900D5B436 /* Supporting Files */,
@@ -197,6 +224,7 @@
 		8121CBCC1746576900D5B436 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8168994617CDF79900058B9F /* Sparkle.framework */,
 				8121CBCD1746576900D5B436 /* Cocoa.framework */,
 				8121CBCF1746576900D5B436 /* Other Frameworks */,
 			);
@@ -230,21 +258,21 @@
 		8121CC0A17465AB500D5B436 /* HFSTools */ = {
 			isa = PBXGroup;
 			children = (
-				8121CC0B17465AB500D5B436 /* hattrib */,
-				8121CC0C17465AB500D5B436 /* hcd */,
-				8121CC0D17465AB500D5B436 /* hcopy */,
-				8121CC0E17465AB500D5B436 /* hdel */,
-				8121CC0F17465AB500D5B436 /* hdir */,
-				8121CC1017465AB500D5B436 /* hformat */,
-				8121CC1117465AB500D5B436 /* hfsutil */,
-				8121CC1217465AB500D5B436 /* hls */,
-				8121CC1317465AB500D5B436 /* hmkdir */,
-				8121CC1417465AB500D5B436 /* hmount */,
-				8121CC1517465AB500D5B436 /* hpwd */,
-				8121CC1617465AB500D5B436 /* hrename */,
-				8121CC1717465AB500D5B436 /* hrmdir */,
-				8121CC1817465AB500D5B436 /* humount */,
-				8121CC1917465AB500D5B436 /* hvol */,
+				8168990E17CDF5F400058B9F /* hattrib */,
+				8168990F17CDF5F400058B9F /* hcd */,
+				8168991017CDF5F400058B9F /* hcopy */,
+				8168991117CDF5F400058B9F /* hdel */,
+				8168991217CDF5F400058B9F /* hdir */,
+				8168991317CDF5F400058B9F /* hformat */,
+				8168991417CDF5F400058B9F /* hfsutil */,
+				8168991517CDF5F400058B9F /* hls */,
+				8168991617CDF5F400058B9F /* hmkdir */,
+				8168991717CDF5F400058B9F /* hmount */,
+				8168991817CDF5F400058B9F /* hpwd */,
+				8168991917CDF5F400058B9F /* hrename */,
+				8168991A17CDF5F400058B9F /* hrmdir */,
+				8168991B17CDF5F400058B9F /* humount */,
+				8168991C17CDF5F400058B9F /* hvol */,
 			);
 			path = HFSTools;
 			sourceTree = "<group>";
@@ -334,6 +362,23 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
+		81FC03DE17CB53E70014C14B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				81FC03DF17CB53FE0014C14B /* SparkleKey */,
+				8130C209175A526000D54D24 /* UnixTools */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		81FC03DF17CB53FE0014C14B /* SparkleKey */ = {
+			isa = PBXGroup;
+			children = (
+				8168990C17CDF5DF00058B9F /* dsa_pub.pem */,
+			);
+			name = SparkleKey;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,6 +391,8 @@
 				8121CBC71746576900D5B436 /* Resources */,
 				8130C20D175A529400D54D24 /* CopyFiles */,
 				8121CBEA17465A4100D5B436 /* CopyFiles */,
+				81FC03DC17CB52BF0014C14B /* CopyFiles */,
+				81FC03E217CB549E0014C14B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -390,21 +437,6 @@
 				8121CBD81746576900D5B436 /* InfoPlist.strings in Resources */,
 				8121CBDE1746576900D5B436 /* Credits.rtf in Resources */,
 				8121CBE41746576900D5B436 /* MainMenu.xib in Resources */,
-				8121CC1A17465AB500D5B436 /* hattrib in Resources */,
-				8121CC1B17465AB500D5B436 /* hcd in Resources */,
-				8121CC1C17465AB500D5B436 /* hcopy in Resources */,
-				8121CC1D17465AB500D5B436 /* hdel in Resources */,
-				8121CC1E17465AB500D5B436 /* hdir in Resources */,
-				8121CC1F17465AB500D5B436 /* hformat in Resources */,
-				8121CC2017465AB500D5B436 /* hfsutil in Resources */,
-				8121CC2117465AB500D5B436 /* hls in Resources */,
-				8121CC2217465AB500D5B436 /* hmkdir in Resources */,
-				8121CC2317465AB500D5B436 /* hmount in Resources */,
-				8121CC2417465AB500D5B436 /* hpwd in Resources */,
-				8121CC2517465AB500D5B436 /* hrename in Resources */,
-				8121CC2617465AB500D5B436 /* hrmdir in Resources */,
-				8121CC2717465AB500D5B436 /* humount in Resources */,
-				8121CC2817465AB500D5B436 /* hvol in Resources */,
 				81B475C61753B60D00F69FF8 /* CustomDiskSizeWindow.xib in Resources */,
 				81B475C81753B83500F69FF8 /* HFSUtilsIcon2.icns in Resources */,
 				8149BB801754D088005AB3C7 /* CreateImageWindow.xib in Resources */,
@@ -412,6 +444,22 @@
 				81CA8BA41756665500565AB4 /* HFSProject.png in Resources */,
 				8130C20C175A527E00D54D24 /* pv in Resources */,
 				8160C54B175F7668007001CF /* HFSFileIcon.icns in Resources */,
+				8168990D17CDF5DF00058B9F /* dsa_pub.pem in Resources */,
+				8168991D17CDF5F400058B9F /* hattrib in Resources */,
+				8168991E17CDF5F400058B9F /* hcd in Resources */,
+				8168991F17CDF5F400058B9F /* hcopy in Resources */,
+				8168992017CDF5F400058B9F /* hdel in Resources */,
+				8168992117CDF5F400058B9F /* hdir in Resources */,
+				8168992217CDF5F400058B9F /* hformat in Resources */,
+				8168992317CDF5F400058B9F /* hfsutil in Resources */,
+				8168992417CDF5F400058B9F /* hls in Resources */,
+				8168992517CDF5F400058B9F /* hmkdir in Resources */,
+				8168992617CDF5F400058B9F /* hmount in Resources */,
+				8168992717CDF5F400058B9F /* hpwd in Resources */,
+				8168992817CDF5F400058B9F /* hrename in Resources */,
+				8168992917CDF5F400058B9F /* hrmdir in Resources */,
+				8168992A17CDF5F400058B9F /* humount in Resources */,
+				8168992B17CDF5F400058B9F /* hvol in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +560,11 @@
 		8121CBE81746576900D5B436 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/HFSUtilsGUI/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFSUtilsGUI/HFSUtilsGUI-Prefix.pch";
 				INFOPLIST_FILE = "HFSUtilsGUI/HFSUtilsGUI-Info.plist";
@@ -523,6 +576,11 @@
 		8121CBE91746576900D5B436 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/HFSUtilsGUI/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFSUtilsGUI/HFSUtilsGUI-Prefix.pch";
 				INFOPLIST_FILE = "HFSUtilsGUI/HFSUtilsGUI-Info.plist";
